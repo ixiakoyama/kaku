@@ -21,13 +21,13 @@
 
             <ul class="g-ul">
                 <li class="menu"><a class="menu1"href="{{ url('/') }}">トップページ</a></li>
-                <li class="menu"><a class="menu1" href="{{ url('#company1') }}" >商品紹介</a></li>
-                <li class="menu"><a class="menu1" href="{{ url('#business') }}">会社情報</a>
+                <li class="menu"><a class="menu1" href="{{ url('#projectnaiyou') }}" >商品紹介</a></li>
+                <li class="menu"><a class="menu1" href="{{ url('#companyh1') }}">会社情報</a>
 
                     <ul class="child_menu">
                         <li><a href="{{ url('/companychild') }}"class="child1">企業情報</a></li>
-                        <li><a href="{{ url('/') }}" class="child2">事業内容</a></li>
-                        <li ><a href="{{ url('/') }}"class="child3">イベント</a></li>
+                        <li><a href="{{ url('/jigyounaiyou') }}" class="child2">事業内容</a></li>
+                        <li ><a href="{{ url('/ibento') }}"class="child3">イベント</a></li>
                         <li ><a href="{{ url('/saiyou') }}"class="child4">採用情報</a></li>
                     </ul>
                 </li>

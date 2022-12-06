@@ -29,7 +29,7 @@
         
         <div class="saiyousaiyou">
         <img class="usi" src="{{ asset('img/22863505.png') }}" alt="">
-        <div class="h1">
+        <div class="saiyouh1">
             <h1>recruit</h1> 
         </div>
     
@@ -92,6 +92,7 @@
        
         
           </body>
+          <a href="/" class="page-top">TOP</a>
       
       </html>
    

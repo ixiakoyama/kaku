@@ -18,7 +18,10 @@
         -1px 0px cornflowerblue,0px -1px cornflowerblue;
     }
    
- 
+ p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+ }
    
 /*トップ*/
 .header-container{
@@ -36,16 +39,16 @@
 .slide {
     position: relative;
     overflow: hidden;
-    width: 60vw;
-    height: 50vh;
+    width: 43vw;
+    height: 46vh;
     margin: auto;
     background: #fff;
   }
   .projectimg {
     display: block;
     position: absolute;
-    left: 100%;
-    animation: slide-anime 8s infinite;
+    width: 60vw;
+    animation: slide-anime 5s infinite;
   }
   .projectimg:nth-of-type(1) {animation-delay: 0s;}
   .projectimg:nth-of-type(2) {animation-delay: 3s;}
@@ -55,7 +58,7 @@
    
   @keyframes slide-anime{
     0% {left: 100%;}
-    2% {left: 0;}
+    2% {left: 100;}
     18% {left: 0;}
     20% {left: -100%;}
     100% {left: -120%;}
@@ -79,6 +82,11 @@
     width: 100%;
     opacity: 0.3;
 }*/
+
+
+.drawer-hidden{/* チェックボックスは非表示に */
+    display: none;
+}
 
 .g-ul{
     position: relative;
@@ -137,71 +145,7 @@
 }
 
 
-/*企業内容*/
-
-
-/*お問い合わせ*/
-.btn{
-    float: right;
-    height: 8.9vh;
-    width: 9.1vw;
-    background-color:#3366cc;/*背景色*/
-    margin-left: 1.7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn a{
-    text-decoration: none;
-    font-size: 18px;
-}
-
-
-.btn-primary{/*お問い合わせボタン*/
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    color: #ffffff;
-    padding: auto;
-}
-
-.btn-primar:hover{/*マウスホバー時の色と秒数*/
-    background-color: #F4F7FD;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transition: 0.9s;
-    background-color: #3366cc; /*背景色*/
-    opacity: 0.3;
-}
-
-.menu_button{
-    display: none;/*ハンバーガー非表示*/
-}
-
-/*グローバルメニュー*/
-.drawer-hidden{/* チェックボックスは非表示に */
-    display: none;
-}
-
-.global_menu{
-    position: relative;
-    padding: 0;
-    color: #333;
-    text-align: right;
-    font-size: 18px;
-    width: 100%;   
-    justify-content: space-around; 
-}
-
-.ul-menu{
-
-    list-style-type: none;
-    padding-left: 0;
-}
-
+/*ナビ*/
 li.menu {
     display: inline-block;
     position: relative;
@@ -210,16 +154,16 @@ li.menu {
 
 li.menu .menu1:hover {
     display: inline-block; /*文字の長さ*/
-    border-bottom: 2px solid #3366cc; /*アンダーラインの太さと色*/
+    border-bottom: 2px solid rgba(100, 149, 237, 0.8); /*アンダーラインの太さと色*/
     border-radius: 2px 2px; /*アンダーラインの角*/
     padding-bottom: 0.74vh; /*文字とアンダーラインのスペース*/
     transition: 0.5s;
 }
-
+/*ドロップメニュー*/
 .child_menu {
     display: none;
-    width: 7.91vw;
-    height: 6.17vh;
+    width: 5.5vw;
+    height: 13vh;
     top: 66px;
     left: 1292px;
     white-space: nowrap;
@@ -231,13 +175,14 @@ li.menu .menu1:hover {
 .menu:hover .child_menu{
     display:block;
     position:absolute;
-        padding:0;
+    padding:0;
     margin:0;
     top:1.5em;
     left:0;
     list-style-type:none;
-    background: #3366cc;
-       margin-left: 30px;
+    background:rgba(100, 149, 237, 1);
+    margin-left: 30px;
+    
 }
 
   .child_menu li{
@@ -245,19 +190,20 @@ li.menu .menu1:hover {
     text-align: left;
     padding-left: 0.5vw;
     line-height: 1.2em;
-       padding-top: 12px;
+    padding-top: 12px;
  }
 
   .child_menu li a{
     display: block;
     color: #fff;
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    text-align: center;
+    text-decoration: dotted;
   }
 
 
- .child_menu li a:hover{
-        opacity: 0.7s;
-    transition: .5s; 
-  }
+ 
 
 .menu a{/*メニュー文字*/
     color: #333;
@@ -277,162 +223,6 @@ li.menu .menu1:hover {
 
     font-style: #333;
 }
-
-/*トップボタン*/
-.toptable li{
-    display: flex;
-}
-
-.topbtn a{
-    display: block;
-    text-decoration: none;   
-}
-
-
-table{
-    margin: auto;/*ボタン中央寄せ*/
-}
-
-span.topbtn-text {
-    text-align: right;
-}
-
-.topbtn-text {
-    font-size: 15px;
-    text-align: center;
-}
-
-.topbtn {
-    position: relative;
-    border: 1px solid #3366cc;
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: 20vw;
-    margin-bottom: 37vh;
-    width: 13vw;
-    height: 4vh;
-    line-height: 20px;
-    text-align: center;
-    background: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    overflow: hidden;
-    padding: 1.5rem 5rem 1.5rem 5rem;
-    transition: all 1s;
-    color: #3366cc;
-}
-
-.topbtn:before,
-:after {
-    /*矢印*/
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-}
-
-.topbtn:before {
-    width: 7px;
-    height: 7px;
-    left: 1.5rem;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
-    z-index: 2;
-    transform: translateY(-50%) rotate(45deg);
-    transition: all 1s;
-}
-
-.topbtn:after {
-    left: -2rem;
-    background: #3366cc;
-    z-index: 1;
-    width: 6rem;
-    height: 130%;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: all 1s;
-}
-
-.topbtn:hover:after {
-    right: 0;
-    width: 120%;
-    border-radius: 0;
-    content: "採用情報はこちら";
-    text-align: center;
-    line-height: 90px;
-    color: #fff;
-    font-size: 15px;
-}
-
-.topbtn1 {
-    position: relative;
-    border: 1px solid #3366cc;
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 37vh;
-    width: 13vw;
-    height: 4vh;
-    line-height: 20px;
-    text-align: center;
-    background: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    overflow: hidden;
-    padding: 1.5rem 1.5rem 1.5rem 5rem;
-    transition: all 1s;
-    color: #3366cc;
-}
-
-
-.topbtn1:before,:after {/*矢印*/
-
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-}
-
-.topbtn1:before {
-    width: 7px;
-    height: 7px;
-    left: 1.5rem;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
-    z-index: 2;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-.topbtn1:after {
-    left: -2rem;
-    background: #3366cc;
-    z-index: 1;
-    width: 6rem;
-    height: 130%;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: all 1s;
-}
-
-.topbtn1:hover:after {
-    right: 0;
-    width: 120%;
-    border-radius: 0;
-    content: "お問い合わせはこちら";
-    text-align: center;
-    line-height: 90px;
-    color: #fff;
-    font-size: 15px;
-}
-
-.btn1 {
-    display: none;
-}
-
-   .snsbtn{
-    display: none
-   }
-
 
 /*.slider{
     width: 300px;
@@ -470,62 +260,52 @@ span.topbtn-text {
         transform:translateX(0)
     }
 }*/
-/*企業*/
+/*トップページ企業*/
 .companycompany{
     flex: 1;
     position: relative;/*相対配置*/
     top: 0;
-    padding-bottom: 0vh;
+    padding: 0;
 }
 
-.campany-table{
-    border-collapse:collapse;
-    margin:0 auto;
+.companycompany .usi{
+    width: 100%;
+   height: 125vh;
 }
+#companyh1{
+    width: 100%;
+    position: absolute; /*絶対配置*/
+    font-weight: bold; /*太字*/
+    font-size: 2vw;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6); /*半透明*/
+     font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
 
-.shop-td{
-    border:1px solid #ccc;
-    padding:10px;
-  }
-
-.td,th{
-    border:1px solid #ccc;
-    padding:10px;
 }
-tr{
-border-left:5px solid #005ab3;
-color:#005ab3;
-}
-
 .company-p{
     text-align: center;
     color: rgba(100, 149, 237, 0.8);
-}
-
-.btncompany{
-    text-align: right;
-    margin-top: 10vh;
-    
-}
-.usi{
-    width: 100%;
-    z-index: 1;
-    opacity: 0.25;
-    height: 127vh;
 }
 /*表示するテキストが切り替わる*/
 .companybtn{
     /*テキストの基点とするためrelativeを指定*/
 	position: relative;
     /*ボタンの形状*/
-	border: 1px solid #555;
+	border: 1px solid rgba(100, 149, 237, 1.0);
 	border-radius:25px;
     min-width:210px;
 	padding: 20px;
     text-align: center;
 	display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: rgba(100, 149, 237, 0.8);
     outline: none;
     /*アニメーションの指定*/
     transition: all .2s;
@@ -534,7 +314,7 @@ color:#005ab3;
 
 /*hoverした際の変化*/
 .companybtn:hover{
-  background:#333;
+  background:rgba(100, 149, 237, 0.8);
   color:#fff;
 }
 
@@ -565,8 +345,10 @@ color:#005ab3;
 	opacity:1;/*不透明に*/
 }
 
-/*事業*/
-.projectnaiyou{
+
+
+/*トップページ事業*/
+#projectnaiyou{
     flex: 1;
     position: relative;/*相対配置*/
     top: 0;
@@ -605,14 +387,14 @@ color:#005ab3;
     /*テキストの基点とするためrelativeを指定*/
 	position: relative;
     /*ボタンの形状*/
-	border: 1px solid #555;
+	border: 1px solid rgba(100, 149, 237, 1.0);
 	border-radius:25px;
     min-width:210px;
 	padding: 20px;
     text-align: center;
 	display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: rgba(100, 149, 237, 0.8);
     outline: none;
     /*アニメーションの指定*/
     transition: all .2s;
@@ -621,7 +403,7 @@ color:#005ab3;
 
 /*hoverした際の変化*/
 .projectbtn:hover{
-  background:#333;
+  background:rgba(100, 149, 237, 0.8);
   color:#fff;
 }
 
@@ -655,7 +437,103 @@ color:#005ab3;
     text-align: right;
 }
 
+/*企業情報ページ*/
+.companycompany1{
+    flex: 1;
+    position: relative;/*相対配置*/
+    top: 0;
+    padding-bottom: 0vh;
+    width: auto;
+
+}
+
+.companycompany1 .usi{
+    width: 100%;
+   height: 40vh;
+}
+.companyh2{
+    width: 100%;
+    position: absolute; /*絶対配置*/
+    font-weight: bold; /*太字*/
+    font-size: 2vw;
+    top:25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 100;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6); /*半透明*/
+     font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+
+}
+
+
+.campany-table{
+    border-collapse:collapse;
+    margin:0 auto;
+    top: 20%;
+    position: relative;
+}
+
+.shop-td{
+    border:1px solid #ccc;
+    padding:10px;
+  }
+
+.td,th{
+        border:1px solid #ccc;
+        padding:10px;
+}
+  tr{
+    border-left:5px solid #005ab3;
+    color:#005ab3;
+  }
+
+
+.btncompany{
+    text-align: right;
+    margin-top: 10vh;
+    
+}
+.usi{
+    width: 100%;
+    z-index: 1;
+    opacity: 0.25;
+    height: 127vh;
+}
+
+
+
 /*店舗*/
+.shop01{
+    flex: 1;
+    position: relative;/*相対配置*/
+    top: 0;
+    padding-bottom: 0vh;
+    width: auto;
+}
+.shop01 .usi{
+    width: 100%;
+   height: 45vh;
+}
+.shoph1{
+    width: 100%;
+    position: absolute; /*絶対配置*/
+    font-weight: bold; /*太字*/
+    font-size: 2vw;
+    top:40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 100;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6); /*半透明*/
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
 .shop-table{
     border-collapse:collapse;
     margin:0 auto;
@@ -685,7 +563,14 @@ color:#005ab3;
     top: 0;
     padding-bottom: 0vh;
 }
-
+.saiyousaiyou .usi{
+    width: 100%;
+    height: 40vh;
+ 
+}
+.saiyouh1{
+    position: relative;
+}
 .saiyou-table{
     border-collapse:collapse;
     margin:0 auto;
@@ -708,8 +593,158 @@ color:#005ab3;
     border-left:5px solid #005ab3;
     color:#005ab3;
 }
+/*商品紹介*/
+.flavor1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 0;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.flavorflavor .usi{
+    width: 100%;
+   height: 45vh;
+   top: 20vh;
+}
+.flavorflavor{
+    width: 100%;
+    position: absolute; /*絶対配置*/
+    font-weight: bold; /*太字*/
+    font-size: 2vw;
+    top:35%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 100;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6); /*半透明*/
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+.flavor-p{
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
+/*イベント*/
+.ibento{
+    width: 100%;
+    position: absolute; /*絶対配置*/
+    font-weight: bold; /*太字*/
+    font-size: 2vw;
+    top:35%;
+    left: 45%;
+    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 100;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6); /*半透明*/
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+.ibento .usi{
+    width: 100%;
+    top: 20vh;
+}
+.ibento1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.ibento-p{
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
 
+/*事業内容*/
+.jigyoujigyou.usi{
+    width: 100%;
+    top: 20vh;
+}
+.jigyou2{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.jigyou-p{
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
 
+/*フッター*/
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.footer-masthead{
+    background-color: paleturquoise;
+}
+
+.fg-ul{
+    position: relative;
+    padding: 0;
+    right: 1.5%;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;   
+    justify-content: space-around; 
+}
+li.fmenu {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+}
+/*ドロップメニュー*/
+.fchild_menu {
+    white-space: nowrap;
+    display: none;
+}
+
+  .fchild_menu li{
+    font-size: 12px;
+    text-align: left;
+    padding-left: 0.5vw;
+    line-height: 1.2em;
+    padding-top: 12px;
+ }
+  .fchild_menu li a{
+    display: block;
+    color: #333;
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    text-align: left;
+    text-decoration: dotted;
+  }
+.fmenu a{/*メニュー文字*/
+    color: #333;
+    text-decoration: none;
+}
+
+.fglobal_menu ul{/*メニュー上の余白*/
+    padding-top: 3.7vh;
+}
+
+.fmenu > a {
+    /*メニュー文字*/
+    font-weight: normal;
+}
+
+.fmenu:visited{/*メニュー文字*/
+    font-style: #333;
+}
+
+.copo p{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
 
 /*トップへボタン*/
     

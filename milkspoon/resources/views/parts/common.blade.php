@@ -20,6 +20,7 @@
     </head>
 
     <body>
+    
         <div class="header">
             @include("parts.header.header")
         </div>
@@ -28,6 +29,11 @@
             @yield('contents')
             
         </div> 
+        <div classs=" footer">
+        @include("parts.footer.foot")
+
+        </div> 
+
           
         <a href="#" class="page-top">TOP</a>
 

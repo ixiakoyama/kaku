@@ -1,7 +1,7 @@
 <section class="company1">
     <div class="companycompany">
     <img class="usi" src="{{ asset('img/22863505.png') }}" alt="">
-    <div class="companyh1">
+    <div id="companyh1">
         <h1>company</h1> 
         <p class="company-p">私たちミルクスプーンは創業より<br>
                             「心も体も健康に」をモットーにしております。<br>

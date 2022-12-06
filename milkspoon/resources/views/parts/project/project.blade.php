@@ -1,5 +1,5 @@
 <section class="project1">
-    <div class="projectnaiyou">
+    <div id="projectnaiyou" >
             <img class="usi" src="{{ asset('img/22863505.png') }}" alt="">
         <div class="projectnaiyouh1">
             <h1>project</h1> 
@@ -22,7 +22,7 @@
                 </p>
         </div>
         <div class="btnproject">
-            <a href="#" class="projectbtn"><span>商品は</span><span>こちら</span></a>
+            <a href="/flavor" class="projectbtn"><span>商品は</span><span>こちら</span></a>
         </div>
         </div>
     </div>
