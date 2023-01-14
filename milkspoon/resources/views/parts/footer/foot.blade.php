@@ -29,7 +29,7 @@
                 <a href="/"><img class="icon" src="img/LINE_Brand_icon.png" ></a>
                 <a href="/"><img class="icon" src="img/Instagram.png" ></a>
                 <a href="/"><img class="icon" src="img/Twitter.png"></a>
-                <a href="/"><img class="icon" src="img/f_logopng" ></a>
+                <a href="/"><img class="icon" src="img/f_logo.png" ></a>
             </div>
         <div class="copo">
             <p>©︎ milkspoon</p>
