@@ -31,6 +31,6 @@
             <td class="shop-td1"></td>
         </tr>
     </table>   
-    <a class="menu1"href="{{ url('/') }}">トップページ</a>
+    <a href="/" class="page-top">TOP</a>
 </div>
 </section>

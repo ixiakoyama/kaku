@@ -26,11 +26,11 @@
         
         <div classs="contents">
             @yield('contents')
-            
         </div> 
-          
+        <div classs="footer">
+            @include("parts.footer.foot")
+        </div> 
+
         <a href="#" class="page-top">TOP</a>
-
     </body>
-
 </html>
