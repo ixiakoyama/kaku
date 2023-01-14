@@ -1,11 +1,8 @@
-@media screen and (min-width:520px){/*PC閲覧時のメガメニュー*/
 
-    .html{
-        width: 1980px;
-        height: 1080px;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+body{
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
     h1 {
         font-family: 'Caveat', cursive;
         font-size: 100px;
@@ -17,25 +14,560 @@
         1px 0px cornflowerblue,0px 1px cornflowerblue,
         -1px 0px cornflowerblue,0px -1px cornflowerblue;
     }
+.under{
+    position: relative;
+    padding:3vh;
+}
+.under:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+}
+.page-top{/***追従するトップへ戻るボタン***/
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(90deg);
+    font-size: 90%;
+    line-height: 1.5rem;
+    color: #737373;
+    padding: 0 0 0 35px;
+    border-top: solid 1px;
+}
+#page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+}
+/***トップへ戻るボタンここまで***/
    
- p{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 25px;
- }
+
+
+
+@media screen and (max-width:519px) {
+    .html{
+        width: 100%;
+    }
+    h1{
+        font-size: 16vw;
+        text-align: center;
+    }
+    p{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 13vw;
+    }
+   img{/**/
+        width: 100%
+   }
+   .usi{
+    width: 100%;
+    z-index: 1;
+    opacity: 0.25;
+    vertical-align: bottom;
+    }
+
+    /*ヘッダー*/
+   .header-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header-masthead {
+        position: fixed;
+        background-color: paleturquoise;
+        height: 12vh;
+        width: 100%;/*画面横幅いっぱいにする*/
+        top: 0;
+        left: 0;
+        opacity: 100;/*不透明度*/
+        z-index: 2;
+    }
+
+    .g-ul{
+        display: none;
+        /*position: relative;
+        padding: 0;
+        right: 1.5%;
+        color: #333;
+        text-align: right;
+        font-size: 18px;
+        width: 100%;   
+        justify-content: space-around;*/ 
+    }
+
+    /*ロゴ*/
+    .logo {
+       text-align: center;
+    }
+    .logo img {
+        width:50vw;
+    }
+    .drawer-hidden{/* チェックボックスは非表示に */
+        display: none;
+    }
+
+    /*トップ画像*/
+    .top-gazou{
+        flex: 1;
+        position: relative;/*相対配置*/
+        top:10vh;
+        width: 100%; 
+    }
+    .top-gazou p{
+        width: 100%;
+        text-align: center;
+        position: absolute; /*絶対配置*/
+        font-weight: bold; /*太字*/
+        font-size: 7vw;
+        top: 37%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+            "Arial", "Yu Gothic", "Meiryo", sans-serif;
+        text-shadow:/*白抜き文字*/
+            1px 1px cornflowerblue,-1px 1px cornflowerblue,/*#6495ED*/
+            -1px -1px cornflowerblue,1px -1px cornflowerblue,
+            1px 0px cornflowerblue,0px 1px cornflowerblue,
+            -1px 0px cornflowerblue,0px -1px cornflowerblue;
+        opacity: 0.6;   
+    }
+    .top-gazou img{
+        width: 100%;
+        vertical-align: bottom;
+        padding-bottom: 10vh;
+    }
+
+    /*トップページ企業*/
+    .companycompany{
+        flex: 1;
+        position:relative;/*相対配置*/
+        top: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .companycompany .usi{
+        width: 100%;
+        height: 80vh;
+        margin: 0;
+        vertical-align: bottom;
+    }
+    #companyh1{
+        width: 100%;
+        position: absolute; /*絶対配置*/
+        font-weight: bold; /*太字*/
+        font-size: 2vw;
+        top: 35%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.6); /*半透明*/
+        font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+            "Arial", "Yu Gothic", "Meiryo", sans-serif;
+        text-align: center;
+    }
+    .company-p{
+        text-align: center;
+        color: rgba(100, 149, 237, 0.8);
+        font-size: 6vw;
+        width: 100%;
+    }
+    .companybtn{
+        /*テキストの基点とするためrelativeを指定*/
+	    position: relative;
+        /*ボタンの形状*/
+	    border: 1px solid rgba(100, 149, 237, 1.0);
+	    border-radius:25px;
+        min-width:210px;
+	    padding: 10px;
+        text-align: center;
+	    display: inline-block;
+        text-decoration: none;
+        color: rgba(100, 149, 237, 0.8);
+        outline: none;
+        font-size: 18px;
+    }
+    .btncompany{
+        float: right;
+    }
+    
+
+    /*トップページ事業*/
+    #projectnaiyou{
+        flex: 1;
+        position:relative;/*相対配置*/
+        top: 0;
+        padding: 0;
+        margin: 0;
+        }
+
+    .usi{
+        width: 100%;
+        height: 80vh;
+        margin: 0;
+        vertical-align: bottom;
+    }
+    .projectnaiyouh1{
+        width: 100%;
+        position: absolute; /*絶対配置*/
+        font-weight: bold; /*太字*/
+        font-size: 2vw;
+        top: 35%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%); /*ズレ調整*/
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.6); /*半透明*/
+        font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+            "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    .project-p{
+        text-align: center;
+        color: rgba(100, 149, 237, 0.8);
+        font-size: 6.2vw;
+        width: 100%;
+    }
+    .item{
+        display: none;
+    }
+    .projectbtn{
+        /*テキストの基点とするためrelativeを指定*/
+        position: relative;
+        /*ボタンの形状*/
+        border: 1px solid rgba(100, 149, 237, 1.0);
+        border-radius:25px;
+        min-width:210px;
+        padding: 10px;
+        text-align: center;
+       
+        text-decoration: none;
+        color: rgba(100, 149, 237, 0.8);
+        outline: none;
+        float: right;
+        font-size: 20px;
+    }
+
+    /*フッター*/
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .footer-masthead{
+        background-color: paleturquoise;
+        width: 100%;
+    }
+    .fg-nav{
+        display: flex;
+    }
+    .flogo{
+        float: left;/*ロゴとメニューを横並び*/   
+    }
+    .flogo img{
+        width: 20vw;
+    }
+    .fg-ul{
+        position: relative;
+        padding: 0;
+        right: 1.5%;
+        color: #333;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;   
+        display:flex;
+        padding-left: 8vw;
+    }
+    li.fmenu {
+        display: inline-block;
+        position: relative;
+        padding-left:10px;
+    }
+    /*ドロップメニュー*/
+    .fchild_menu {
+        white-space: nowrap;
+        padding-left: 10px;
+    }
+    .fchild_menu ul{
+        padding-left: 0px;
+    }
+    .fchild_menu li{
+        font-size: 10px;
+        text-align: left;
+        padding-left: 0.2vw;
+        line-height: 1.2em;
+        padding-top: 12px;
+    }
+    .fchild_menu li a{
+        display: block;
+        color: #333;
+        font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+        text-align: left;
+        text-decoration: dotted;
+    }
+    .fmenu a{/*メニュー文字*/
+        color: #333;
+        text-decoration: none;
+    }
+
+    .fglobal_menu ul{/*メニュー上の余白*/
+        padding-top: 3.7vh;
+    }
+
+    .fmenu > a {
+        /*メニュー文字*/
+        font-weight: normal;
+    }
+
+    .fmenu:visited{/*メニュー文字*/
+        font-style: #333;
+    }
+
+    .copo p{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 50px;
+    }
+    .icon{
+        width: 6vw;
+        padding-left: 16vw;
+    }
+
+    /*----------------------------------------*/
+    /*店舗*/
+    .shop-usi{
+        width: 100%;
+        height: 80vh;
+        margin: 0;
+        vertical-align: bottom;
+        opacity: 0.25;
+    }
+    .shoph1{
+        flex: 1;
+        position: absolute;/*相対配置*/
+        top: 20%;
+        padding-bottom: 0vh;
+        width: 100%;
+    }
+    .shop-table{
+        width: 100%;
+        border-collapse:collapse;
+        position:absolute;
+        margin-left: 8vw;  
+    }
+    .shop-tr{
+        border:1px solid #ccc;
+        height: 10vh;
+        color: green;
+    }
+    .shop-th{
+        background-color: cornflowerblue;
+        opacity: 0.6;
+    }      
+    .shop-td{
+        text-align: center;
+    }
+    .shop-a{
+        text-decoration: none;
+    }
+    .shop-a:visited{
+        color: cornflowerblue;
+    }
+
+/*----------------------------------------*/
+/*採用*/
+.saiyou-usi{
+    width: 100%;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
+ 
+}
+.saiyouh1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+
+.saiyou-table{
+    width: 80%;
+    border-collapse:collapse;
+    margin:0 auto;
+}
+.saiyou-tr{
+    background-color: cornflowerblue;
+    opacity: 0.3;
+}
+
+.saiyou-th{
+    text-align: center;
+    font-size: 20px;
+    color: green;
+}
+
+.saiyou-td{
+    text-align: center;
+    border:1px solid #ccc;
+    padding:10px;
+    font-size: 13px;
+    color: cornflowerblue ;
+  }
+/*----------------------------------------*/
+/*商品紹介*/
+.flavor1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.flavorflavor .usi{
+    width: 100%;
+   height: 219.7vh;
+   opacity: 0.1;
+}
+
+.flavor-p{
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
+.gazougazou{
+    z-index: 10;
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 0;
+    padding-bottom: 0vh;
+    width: 100%;
+
+}
+.flavorgazou{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.flavorgazou1{
+    position: relative;
+    text-align: center;
+}
+.flavorgazou2{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ajigazou{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+}
+/*----------------------------------------*/
+/*イベント*/
+
+
+.ibento-usi{
+    width: 100%;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
+}
+.ibento1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.ibento-p{
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
+.ibento-gazou{
+    width: 90%;
+    height: 100vh;
+    padding: 10vh;
+    position: relative;
+}
+/*----------------------------------------*/
+
+/*事業内容*/
+.jigyou-usi{
+    width: 100%;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
+}
+.jigyou2{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.jigyou-p{
+    padding-top: 30vh;
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
+    
+
+
+.projectimg {
+width: 50%;
+    
+}
+
+}
+
+@media screen and (min-width:520px){/*PC閲覧時のメガメニュー*/
+
+    .html{
+        width: 1980px;
+        height: 1080px;
+      
+    }
+    p{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+   
+ 
+
+   
+
    
 /*トップ*/
 .header-container{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
 
 }
 
-
-
-/*.innertop-section4{
-        margin-bottom: 800px;
-}*/
+/*トッププロジェクト*/
 .slide {
     position: relative;
     overflow: hidden;
@@ -76,14 +608,8 @@
     left: 0;
     opacity: 100;/*不透明度*/
     z-index: 2;
+  
 }
-/*.headerusi{
-    height: 100%;
-    width: 100%;
-    opacity: 0.3;
-}*/
-
-
 .drawer-hidden{/* チェックボックスは非表示に */
     display: none;
 }
@@ -107,8 +633,8 @@
     margin-bottom: 2.2vh;
 }
 
-.logo p {
-    width: 120px;
+.logo img {
+    width:90px;
 }
 
 /*.logo1 {
@@ -119,29 +645,40 @@
     flex: 1;
     position: relative;/*相対配置*/
     top:10vh;
+    width: 100%;
+   
 }
 
 .top-gazou p{
     position: absolute; /*絶対配置*/
     font-weight: bold; /*太字*/
-    font-size: 2vw;
-    top: 30%;
+    font-size: 3vw;
+    top: 37%;
     left: 50%;
     -ms-transform: translate(-50%, -50%); /*ズレ調整*/
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
-    color: rgba(255, 255, 255, 0.6); /*半透明*/
+    color: #fff;
     margin-bottom: 3.7vh;
     padding-bottom:17.8vh;
-     font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
         "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    text-shadow:/*白抜き文字*/
+        1px 1px cornflowerblue,-1px 1px cornflowerblue,/*#6495ED*/
+        -1px -1px cornflowerblue,1px -1px cornflowerblue,
+        1px 0px cornflowerblue,0px 1px cornflowerblue,
+        -1px 0px cornflowerblue,0px -1px cornflowerblue;
+    opacity: 0.6;
+       
 }
 
 .top-gazou img{
     width: 100%;
-    padding-bottom: 8vh;
+    vertical-align: bottom;
+    padding-bottom: 10vh;
+ 
 }
 
 
@@ -168,11 +705,31 @@ li.menu .menu1:hover {
     left: 1292px;
     white-space: nowrap;
 }
+.menu_child{
+    display: none;
+    width: 5.5vw;
+    height: 5.9vh;
+    top: 66px;
+    left: 1292px;
+    white-space: nowrap;
+}
 .child_menu1{
     display: none;
 }
 
 .menu:hover .child_menu{
+    display:block;
+    position:absolute;
+    padding:0;
+    margin:0;
+    top:1.5em;
+    left:0;
+    list-style-type:none;
+    background:rgba(100, 149, 237, 1);
+    margin-left: 30px;
+    
+}
+.menu:hover .menu_child{
     display:block;
     position:absolute;
     padding:0;
@@ -202,7 +759,22 @@ li.menu .menu1:hover {
     text-decoration: dotted;
   }
 
+  .menu_child li{
+    font-size: 10px;
+    text-align: left;
+    padding-left: 0.5vw;
+    line-height: 1.2em;
+    padding-top: 12px;
+ }
 
+  .menu_child li a{
+    display: block;
+    color: #fff;
+    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    text-align: center;
+    text-decoration: dotted;
+  }
  
 
 .menu a{/*メニュー文字*/
@@ -224,53 +796,89 @@ li.menu .menu1:hover {
     font-style: #333;
 }
 
-/*.slider{
-    width: 300px;
-    height: 20px;
+  .slide{
+    position: relative;
+    width: 500px;
+    height: 300px;
     overflow: hidden;
     margin: 0 auto;
-}
-
-.slider-item{
-    width: 300px;
-    float: right;
-}
-
-.projectimg{
-    width: 300vw;
-    text-align: center;
-}
-
-.genryou{
+  }
+  .item1, .item2, .item3 ,.item4{
+    position: absolute;
+    top:0;
+    left:0;
     width: 100%;
-    animation: slider 10s infiniteease !important;
-}
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .item1{
+    animation: slide1 20s infinite;
+  }
+  .item2{
+    animation: slide2 20s infinite;
+  }
+  .item3{
+    animation: slide3 20s infinite;
+  }
+  .item4{
+    animation: slide4 20s infinite;
+  }
 
-@keyflrames slider{
-    0%{
-        transform:translateX(0);
-    }
-    33%{
-        transform:translateX(-300px)
-    }
-    66%{
-        transform:translateX(-600px)
-    }
-    100%{
-        transform:translateX(0)
-    }
-}*/
+  
+  @keyframes slide1 {
+    0% {opacity: 1; transform: scale(1.0);}
+    20% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0; transform: scale(1.1);}
+    90% {opacity: 0}
+    100% {opacity: 1; transform: scale(1.0);}
+  }
+  
+  @keyframes slide2 {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: scale(1.1);}
+    40% {opacity: 1;}
+    50% {opacity: 1;}
+    60% {opacity: 0; transform: scale(1.0);}
+    100% {opacity: 0;}
+  }
+  
+  @keyframes slide3 {
+    0% {opacity: 0;}
+    50% {opacity: 0;  transform: scale(1.0);}
+    60% {opacity: 1;}
+    70% {opacity: 1;}
+    90% {opacity: 0; transform: scale(1.1);}
+    100% {opacity: 0;}
+  }
+  
+  @keyframes slide4 {
+    0% {opacity: 0;}
+    70% {opacity: 0; transform: scale(1.1);}
+    80% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0; transform: scale(1.0);}
+  }
+
 /*トップページ企業*/
 .companycompany{
     flex: 1;
-    position: relative;/*相対配置*/
+    position:relative;/*相対配置*/
     top: 0;
     padding: 0;
+    margin: 0;
+   
 }
 
 .companycompany .usi{
     width: 100%;
    height: 125vh;
+   margin: 0;
+   vertical-align: bottom;
+  
+  
 }
 #companyh1{
     width: 100%;
@@ -353,12 +961,18 @@ li.menu .menu1:hover {
     position: relative;/*相対配置*/
     top: 0;
     padding-bottom: 0vh;
+ 
 
 }
 
-.projectnaiyou .usi{
-    width: 100%;
-   height: 125vh;
+.usi{
+   
+
+   width: 100%;
+   z-index: 1;
+   opacity: 0.25;
+   height: 127vh;
+   vertical-align: bottom;
 }
 .projectnaiyouh1{
     width: 100%;
@@ -437,215 +1051,177 @@ li.menu .menu1:hover {
     text-align: right;
 }
 
-/*企業情報ページ*/
-.companycompany1{
-    flex: 1;
-    position: relative;/*相対配置*/
-    top: 0;
-    padding-bottom: 0vh;
-    width: auto;
-
-}
-
-.companycompany1 .usi{
-    width: 100%;
-   height: 40vh;
-}
-.companyh2{
-    width: 100%;
-    position: absolute; /*絶対配置*/
-    font-weight: bold; /*太字*/
-    font-size: 2vw;
-    top:25%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 100;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.6); /*半透明*/
-     font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-        "Arial", "Yu Gothic", "Meiryo", sans-serif;
-
-}
-
-
-.campany-table{
-    border-collapse:collapse;
-    margin:0 auto;
-    top: 20%;
-    position: relative;
-}
-
-.shop-td{
-    border:1px solid #ccc;
-    padding:10px;
-  }
-
-.td,th{
-        border:1px solid #ccc;
-        padding:10px;
-}
-  tr{
-    border-left:5px solid #005ab3;
-    color:#005ab3;
-  }
-
-
 .btncompany{
     text-align: right;
     margin-top: 10vh;
     
 }
-.usi{
+
+/*企業情報ページ*/
+
+.company-usi{
     width: 100%;
-    z-index: 1;
-    opacity: 0.25;
-    height: 127vh;
+   height: 219.7vh;
+   opacity: 0.1;
+   vertical-align: bottom;
 }
-
-
-
-/*店舗*/
-.shop01{
+.companyh2{
     flex: 1;
-    position: relative;/*相対配置*/
-    top: 0;
+    position: absolute;/*相対配置*/
+    top: 30%;
     padding-bottom: 0vh;
-    width: auto;
-}
-.shop01 .usi{
     width: 100%;
-   height: 45vh;
-}
-.shoph1{
-    width: 100%;
-    position: absolute; /*絶対配置*/
-    font-weight: bold; /*太字*/
-    font-size: 2vw;
-    top:40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 100;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.6); /*半透明*/
-    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-        "Arial", "Yu Gothic", "Meiryo", sans-serif;
-}
-.shop-table{
-    border-collapse:collapse;
-    margin:0 auto;
+
 }
 
-.shop-td{
-    border:1px solid #ccc;
-    padding:10px;
-  }
-.shop-td1{
-    border:1px solid #ccc;
-    padding:10px;
-    background-color: #cccfff;
-  }
 .td,th{
         border:1px solid #ccc;
         padding:10px;
 }
-  tr{
-    border-left:5px solid #005ab3;
-    color:#005ab3;
-  }
-/*採用*/
-.saiyousaiyou{
-    flex: 1;
-    position: relative;/*相対配置*/
-    top: 0;
-    padding-bottom: 0vh;
-}
-.saiyousaiyou .usi{
+
+
+/*----------------------------------------*/
+/*店舗*/
+.shop-usi{
     width: 100%;
-    height: 40vh;
+   height: 219.7vh;
+   opacity: 0.1;
+   vertical-align: bottom;
+}
+.shoph1{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+
+.shop-table{
+    width: 80%;
+    border-collapse:collapse;
+    margin-top: 37vh;
+    position:absolute;
+   margin-left: 8vw;
+    
+    
+}
+.shop-tr{
+    border:1px solid #ccc;
+    height: 15vh;
+    color: green;
+}
+.shop-th{
+    background-color: cornflowerblue;
+    opacity: 0.6;
+}
+.shop-td{
+    text-align: center;
+}
+
+.shop-a{
+    text-decoration: none;
+    
+}
+.shop-a:visited{
+    color: cornflowerblue;
+}
+
+/*----------------------------------------*/
+/*採用*/
+.saiyou-usi{
+    width: 100%;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
  
 }
 .saiyouh1{
-    position: relative;
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
 }
+
 .saiyou-table{
+    width: 80%;
     border-collapse:collapse;
     margin:0 auto;
-    top:0;
-    position: relative;
+}
+.saiyou-tr{
+    background-color: cornflowerblue;
+    opacity: 0.3;
+}
 
+.saiyou-th{
+    text-align: center;
+    font-size: 20px;
+    color: green;
 }
 
 .saiyou-td{
+    text-align: center;
     border:1px solid #ccc;
     padding:10px;
-    font-size: 16px;
+    font-size: 13px;
+    color: cornflowerblue ;
   }
-
-.td,th{
-    border:1px solid #ccc;
-    padding:10px;
-}
-.tr{
-    border-left:5px solid #005ab3;
-    color:#005ab3;
-}
+/*----------------------------------------*/
 /*商品紹介*/
 .flavor1{
     flex: 1;
     position: absolute;/*相対配置*/
-    top: 0;
+    top: 30%;
     padding-bottom: 0vh;
     width: 100%;
 }
 .flavorflavor .usi{
     width: 100%;
-   height: 45vh;
-   top: 20vh;
+   height: 219.7vh;
+   opacity: 0.1;
 }
-.flavorflavor{
-    width: 100%;
-    position: absolute; /*絶対配置*/
-    font-weight: bold; /*太字*/
-    font-size: 2vw;
-    top:35%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 100;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.6); /*半透明*/
-    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-        "Arial", "Yu Gothic", "Meiryo", sans-serif;
-}
+
 .flavor-p{
     text-align: center;
     color: rgba(100, 149, 237, 0.8);
 }
-/*イベント*/
-.ibento{
+.gazougazou{
+    z-index: 10;
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 0;
+    padding-bottom: 0vh;
     width: 100%;
-    position: absolute; /*絶対配置*/
-    font-weight: bold; /*太字*/
-    font-size: 2vw;
-    top:35%;
-    left: 45%;
-    -ms-transform: translate(-50%, -50%); /*ズレ調整*/
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 100;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.6); /*半透明*/
-    font-family: "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-        "Arial", "Yu Gothic", "Meiryo", sans-serif;
+
 }
-.ibento .usi{
+.flavorgazou{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.flavorgazou1{
+    position: relative;
+    text-align: center;
+}
+.flavorgazou2{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ajigazou{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+}
+/*----------------------------------------*/
+/*イベント*/
+
+
+.ibento-usi{
     width: 100%;
-    top: 20vh;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
 }
 .ibento1{
     flex: 1;
@@ -658,11 +1234,20 @@ li.menu .menu1:hover {
     text-align: center;
     color: rgba(100, 149, 237, 0.8);
 }
+.ibento-gazou{
+    width: 90%;
+    height: 100vh;
+    padding: 10vh;
+    position: relative;
+}
+/*----------------------------------------*/
 
 /*事業内容*/
-.jigyoujigyou.usi{
+.jigyou-usi{
     width: 100%;
-    top: 20vh;
+    height: 219.7vh;
+    opacity: 0.1;
+    vertical-align: bottom;
 }
 .jigyou2{
     flex: 1;
@@ -672,6 +1257,7 @@ li.menu .menu1:hover {
     width: 100%;
 }
 .jigyou-p{
+    padding-top: 30vh;
     text-align: center;
     color: rgba(100, 149, 237, 0.8);
 }
@@ -680,10 +1266,25 @@ li.menu .menu1:hover {
 .footer-container{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+  
 }
 .footer-masthead{
     background-color: paleturquoise;
+    width: 100%;
+}
+.fg-nav{
+    display: flex;
+}
+.flogo{
+    padding-left: 2.5vw;
+    float: left;/*ロゴとメニューを横並び*/
+    margin-bottom: 2.2vh;
+}
+.flogo img{
+    width: 120px;
+    padding-right: 18vw;
 }
 
 .fg-ul{
@@ -694,7 +1295,7 @@ li.menu .menu1:hover {
     text-align: center;
     font-size: 18px;
     width: 100%;   
-    justify-content: space-around; 
+    display:flex;
 }
 li.fmenu {
     display: inline-block;
@@ -704,7 +1305,6 @@ li.fmenu {
 /*ドロップメニュー*/
 .fchild_menu {
     white-space: nowrap;
-    display: none;
 }
 
   .fchild_menu li{
@@ -745,33 +1345,103 @@ li.fmenu {
     text-align: center;
     margin-top: 50px;
 }
+.ficon{
+    float: right;
+    padding-right: 2.1vw;
+}
+.icon{
+    width: 2vw;
+}
 
-/*トップへボタン*/
-    
-.page-top{/***追従するトップへ戻るボタン***/
-    position: fixed;
-    right: 5px;
-    bottom: 20px;
-    height: 50px;
+/*問い合わせ*/
+.container2{
+    flex: 1;
+    position: absolute;/*相対配置*/
+    top: 30%;
+    padding-bottom: 0vh;
+    width: 100%;
+}
+.toiawase-usi{
+    width: 100%;
+   height: 219.7vh;
+   opacity: 0.1;
+   vertical-align: bottom;
+}
+.container{/*問い合わせ項目全体*/
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.koumoku {/*問い合わせ項目毎*/
+    text-align: center;
+    color: rgba(100, 149, 237, 0.8);
+}
+.tyuui{/*必須の文字*/
+    color:maroon;
+}
+.keikoku{/*入力エラーの文章*/
+    text-align: center;
+    color: rgba(50, 103, 170, 0.8);
+}
+.naiyou{/*入力内容*/
+    color: darkslateblue;
+    text-align: center;
+}
+.waku{/*入力できる枠*/
+    padding: 1vh 16vw;
+}
+.sousinbtn{/*ボタンのグループ*/
+    text-align: center;
+    margin-top: 5vh;
+}
+.kakuninbtn{/*確認ボタン*/
+    border: 1px solid rgba(100, 149, 237, 1.0);
+	border-radius:25px;
+    min-width:120px;
+	padding: 10px;
+    text-align: center;
+	display: inline-block;
     text-decoration: none;
-    font-weight: bold;
-    transform: rotate(90deg);
-    font-size: 90%;
-    line-height: 1.5rem;
-    color: #737373;
-    padding: 0 0 0 35px;
-    border-top: solid 1px;
+    color: rgba(100, 149, 237, 0.8);
+    outline: none;
+    transition: all .2s;/*アニメーションの指定*/
 }
-#page-top::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: 0px;
-    width: 15px;
-    border-top: solid 1px;
-    transform: rotate(35deg);
-    transform-origin: left top;
+/*hoverした際の変化*/
+.kakuninbtn:hover{
+    background:rgba(100, 149, 237, 0.8);
+    color:#fff;
 }
-/***トップへ戻るボタンここまで***/
+
+.nyuuryoku{
+    padding: 10px 20px;
 }
+.mailform{
+    width: 60%;
+    height: 219vh;
+    text-align: center;
+    margin-left: 22%;
+}
+.contact-h{
+    margin-top: 45vh;
+}
+.postform{
+    margin-top: 35vh;
+    display: flex;
+    flex-flow: column;
+    border: 13px #ccc solid;
+    height: 70vh;
+    
+}
+
+.nyuryoku{
+    height: 7vh;
+}
+.lavelbody{
+    height: 30vh;
+}
+.nyuryokubotton{
+    height: 7vh;
+}
+
+}
+

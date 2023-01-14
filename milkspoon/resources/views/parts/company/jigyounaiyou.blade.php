@@ -1,35 +1,12 @@
-<!DOCTYPE HTML>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--レスポンシブ-->
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        @isset($title)
-            <title>{{ $title }} Milk Sppon</title>
-        @else
-            <title>Milk Spoon　ウェブサイト</title>
-        @endisset
-
-        @stack('css')
-
-            <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
-  
-    </head>
-
-    <body>
-        <div class="header">
-            @include("parts.header.header")
-        </div>
+@extends('parts.common')
+@section('contents')
 
 <div classs="contents">
 <section class="jigyou1">
     <div class="jigyoujigyou">
-            <img class="usi" src="{{ asset('img/22863505.png') }}" alt="">
+            <img class="jigyou-usi" src="{{ asset('img/22863505.png') }}" alt="">
         <div class="jigyou2">
-            <h1>jigyour</h1> 
+            <h1><span class="under">jigyou</span></h1> 
         <div class="jigyounaiyou">
 
 
@@ -45,5 +22,5 @@
 </section>
 </div>
 <a href="/" class="page-top">TOP</a>
-</body>
-</html>
+
+@endsection 
